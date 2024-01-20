@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import AnswerDisplay from './AnswerDisplay';
+import AnswerInput from './AnswerInput';
 
 function App() {
+
+  const wordList = [
+    'dog',
+    'cat',
+    'parrot',
+    'turtle',
+    'hamster'
+];
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Text Twist in React</h1>
+        </header>
+<div className='GameScreen'>
+ 
+  <h2>Game Screen</h2>
+  <AnswerDisplay wordList={wordList}/>
+  <AnswerInput/>
+
+  <div>
+    <h3>Available Letters</h3>
+  </div>
+</div>
+
     </div>
   );
 }
