@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -36,16 +37,25 @@
     transform: rotate(360deg);
   }
 }
-
+.AnswerDisplay {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 400px;
+  border: 1px black solid;
+}
 .WordDisplay {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .LetterDisplay {
-  padding-left: 10px;
-  padding-right: 10px;
+  min-width: 1em;
+  min-height: 1.5em;
+  padding:10px;
   border: #61dafb solid 1px;
- /*margin:auto;*/
+ margin:10px;
+ font-size:20px;
+ font-style: bold;
 
 }
