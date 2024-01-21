@@ -10,7 +10,12 @@ function App() {
     'cat',
     'parrot',
     'turtle',
-    'hamster'
+    'hamster',
+    'turkey',
+    'fish',
+    'tortoise',
+    'armadillo',
+    'leopard'
 ];
   return (
     <div className="App">
@@ -20,6 +25,7 @@ function App() {
 <div className='GameScreen'>
  
   <h2>Game Screen</h2>
+  <p>Click on the boxes to reveal/hide the letters.</p>
   <AnswerDisplay wordList={wordList}/>
   <AnswerInput/>
 
