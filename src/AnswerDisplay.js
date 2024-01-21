@@ -7,12 +7,12 @@ export default function AnswerDisplay(props) {
     
     
     return (
+        <div>
+             <h3>Answer Display</h3>
         <div className='AnswerDisplay'>
-            <h3>Answer Display</h3>
-            <p>this is the answer display box woooo</p>
-            <WordDisplay word="butt" isHidden={false}/>
-            {wordList.map((word) => <WordDisplay word={word} isHidden={false} />)}
+            {wordList.map((word) => <WordDisplay word={word} isHidden={true} />)}
 
+        </div>
         </div>
     );
 }
