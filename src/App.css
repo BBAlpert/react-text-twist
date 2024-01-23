@@ -55,6 +55,9 @@
 .WordDisplay {
   display: flex;
   justify-content: left;
+  column-gap: 10px;
+  flex-grow: 0;
+  border: #61dafb 1px solid;
 }
 
 .LetterDisplay {
@@ -80,4 +83,10 @@
   border-radius: 5px;
   width: 4rem;
   align-content: center;
+}
+
+.guessedWord {
+  font-size: 3em;
+  /*margin-bottom: 10px;*/
+  margin-top: 0px;
 }

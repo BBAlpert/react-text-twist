@@ -26,10 +26,20 @@ function App() {
     { word: "bird", hidden: true },
     { word: "cat", hidden: true },
   ];
+  /*
+  const wordList = new Map( [
+    ["dog", { word: "dog", hidden: true }],
+    ["turtle", { word: "turtle", hidden: false }],
+    ["leopard", { word: "leopard", hidden: true }],
+    ["fish", { word: "fish", hidden: true }],
+    ["hamster", { word: "hamster", hidden: false }],
+    ["bird", { word: "bird", hidden: true }],
+    ["cat", { word: "cat", hidden: true }]
+  ]); */
 
   const hideWord = (word) => {
     word.hidden = !word.hidden;
-    console.log("test");
+    //console.log("test");
   };
 
   return (
@@ -43,9 +53,6 @@ function App() {
         <AnswerDisplay wordList={wordList} />
         <AnswerInput wordList={wordList} />
         {/* why am i separating input and display like this? */}
-        <div>
-          <h3>Available Letters</h3>
-        </div>
       </div>
     </div>
   );
