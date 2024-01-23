@@ -1,3 +1,12 @@
+/*
+#564138 Van Dyke brown
+#E8F7EE Honeydew
+#B8C4BB Ash gray
+#C9D6EA Columbia blue
+#072AC8 Persian blue
+
+*/
+
 .App {
   text-align: center;
 }
@@ -22,7 +31,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  
 }
 
 .App-link {
@@ -52,10 +60,24 @@
 .LetterDisplay {
   min-width: 1em;
   min-height: 1.5em;
-  padding:10px;
+  padding: 10px;
   border: #61dafb solid 1px;
- margin:10px;
- font-size:20px;
- font-style: bold;
+  margin: 10px;
+  font-size: 20px;
+  font-style: bold;
+}
 
+.AvailableLetters {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.answerLetter {
+  font-size: 2rem;
+  border: #61dafb solid 1px;
+  border-radius: 5px;
+  width: 4rem;
+  align-content: center;
 }

@@ -28,9 +28,10 @@ function App() {
   ];
 
   const hideWord = (word) => {
-    //word.hidden = !word.hidden;
+    word.hidden = !word.hidden;
     console.log("test");
   };
+
   return (
     <div className="App">
       <header className="App-header">
