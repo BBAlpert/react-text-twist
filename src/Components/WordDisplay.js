@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import LetterDisplay from "./LetterDisplay";
 
 export default function WordDisplay(props) {
-  const myWord = props.word.toUpperCase();
+  const myWord = props.word;
   const myLetters = [];
   const [myIsHidden, setMyIsHidden] = useState(props.isHidden);
 
