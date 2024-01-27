@@ -5,7 +5,6 @@ import AnswerInput from "./Components/AnswerInput";
 import { useState } from "react";
 
 function App() {
-
   // Initialize the collection of words as a straightforward array
   const wordArray = [
     "dog",
@@ -21,10 +20,9 @@ function App() {
   ];
 
   // Turn the array of words into a map of objects with keys, the words themselves, and whether they are hidden
-  
-  const wordMap = wordArray.map((myWord) => {
+  /* const wordMap = wordArray.map((myWord) => {
     myWord = myWord.toUpperCase();
-return {key:myWord, word: myWord, hidden: true};
+    return { key: myWord, word: myWord, hidden: true };
   });
 
   wordMap.forEach(myFunction);
@@ -33,9 +31,19 @@ return {key:myWord, word: myWord, hidden: true};
     console.log(value);
     console.log(value.word);
   }
+*/
+  const wordMap = [
+    { key: 0, word: "DOG", hidden: true },
+    { key: 1, word: "TURTLE", hidden: false },
+    { key: 2, word: "LEOPARD", hidden: true },
+    { key: 3, word: "FISH", hidden: true },
+    { key: 4, word: "HAMSTER", hidden: false },
+    { key: 5, word: "BIRD", hidden: true },
+    { key: 6, word: "CAT", hidden: true },
+  ];
 
   // Initialize the State-ed wordList with the objects in wordMap
-const [wordList, setWordList] = useState(wordMap);
+  const [wordList, setWordList] = useState(wordMap);
 
   /*const wordList = [
     { key: "dog", word: "dog", hidden: true },
@@ -46,11 +54,9 @@ const [wordList, setWordList] = useState(wordMap);
     { key: "bird", word: "bird", hidden: true },
     { key: "cat", word: "cat", hidden: true },
   ];*/
-  
 
-// Make a new array of letters
+  // Make a new array of letters
   const [letterList, setLetterList] = useState([]);
-
 
   const hideWord = (word) => {
     word.hidden = !word.hidden;
@@ -58,13 +64,13 @@ const [wordList, setWordList] = useState(wordMap);
   };
 
   // How to add letters to the letterList, checking for duplicates first
-function addLetter(myLetter) {
-  if (!letterList.includes(myLetter)) {
-const newLetters = letterList;
-newLetters.push(myLetter);
-setLetterList(newLetters);
+  function addLetter(myLetter) {
+    if (!letterList.includes(myLetter)) {
+      const newLetters = letterList;
+      newLetters.push(myLetter);
+      setLetterList(newLetters);
+    }
   }
-}
   return (
     <div className="App">
       <header className="App-header">
@@ -74,7 +80,7 @@ setLetterList(newLetters);
         <h2>Game Screen</h2>
         <p>Click on the boxes to reveal/hide the letters.</p>
         <AnswerDisplay wordList={wordList} />
-        <AnswerInput wordList={wordList} letterList = {letterList}/>
+        <AnswerInput wordList={wordList} letterList={letterList} />
         {/* why am i separating input and display like this? */}
       </div>
     </div>
